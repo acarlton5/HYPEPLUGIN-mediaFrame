@@ -1,0 +1,19 @@
+{
+  "id": "mediaFrame",
+  "name": "Media Frame",
+  "description": "Desktop plugin to display a picture on your desktop",
+  "version": "1.5.0",
+  "author": "claymorwan",
+  "type": "desktop",
+  "capabilities": [
+    "desktop-widget"
+  ],
+  "icon": "wall_art",
+  "component": "./Widget.qml",
+  "settings": "./Settings.qml",
+  "requires_dms": ">=1.2.0",
+  "permissions": [
+    "settings_read",
+    "settings_write"
+  ]
+}
