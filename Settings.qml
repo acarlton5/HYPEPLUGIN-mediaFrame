@@ -329,7 +329,7 @@ PluginSettings {
                 horizontalPadding: 4
                 anchors.verticalCenter: parent.verticalCenter
                 onClicked: {
-                    Quickshell.execDetached(["dms", "cl", "copy", root.ipcName]);
+                    Quickshell.execDetached(["hype", "cl", "copy", root.ipcName]);
                     ToastService.showInfo(I18n.tr("Copied to clipboard"));
                 }
             }

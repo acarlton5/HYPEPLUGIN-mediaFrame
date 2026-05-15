@@ -22,7 +22,7 @@ Media Frame can also optionally run a command to fetch new images. By default th
 
 ### IPC
 
-Media Frame exposes IPC commands that can be run through the `dms ipc` command. You can copy the IPC name in the widget settings.
+Media Frame exposes IPC commands that can be run through the `hype ipc` command. You can copy the IPC name in the widget settings.
 
 - `refresh`: Calls the `Refresh Action` and then loads the new image.
 - `reload`: Reloads the displayed image from the filesystem (including an optional fade-in transition).
@@ -31,7 +31,7 @@ Media Frame exposes IPC commands that can be run through the `dms ipc` command. 
 You can use this to regularly change the displayed image by calling
 
 ```sh
-dms ipc call mediaFrame_replaceMe refresh
+hype ipc call mediaFrame_replaceMe refresh
 ```
 
 from a cron job or systemd timer.
@@ -53,7 +53,7 @@ Description=fetch and display random cat picture
 
 [Service]
 Type=oneshot
-ExecStart=dms ipc call mediaFrame_replaceMe refresh
+ExecStart=hype ipc call mediaFrame_replaceMe refresh
 ```
 
 ```ini
@@ -66,6 +66,6 @@ OnCalendar=*:0/10:00
 AccuracySec=1s
 
 [Install]
-WantedBy=dms.service
+WantedBy=hype.service
 
 ```
